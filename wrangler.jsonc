@@ -1,0 +1,27 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "tingfeng-d1",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-03-03",
+    "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "tingfeng-database",
+          "database_id": "e9a6e818-4e76-4e9f-a76d-a3d9c9fd82ef"
+        }
+    ],
+    "secrets_store_secrets": [
+        {
+            "store_id": "5938efbed09841b281efe134ce355bea",
+            "binding": "SECRET",
+            "secret_name": "r3inbowari"
+        }
+    ],
+	"observability": {
+		"enabled": true
+	}
+}
